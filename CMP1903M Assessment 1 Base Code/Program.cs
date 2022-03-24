@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace CMP1903M_Assessment_1_Base_Code
 {
@@ -16,8 +17,9 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             //Create 'Input' object
             //Get either manually entered text, or text from a file
-
-            Input i = new Input();
+            Console.WriteLine("How would you like to enter your text?\n1) Keyboard \n2) File");
+            
+            
 
 
 
