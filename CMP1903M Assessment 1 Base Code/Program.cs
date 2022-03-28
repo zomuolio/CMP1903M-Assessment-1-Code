@@ -16,22 +16,23 @@ namespace CMP1903M_Assessment_1_Base_Code
             List<int> parameters = new List<int>();
 
             //Create 'Input' object
-            Input text = new Input();
+            Input Text = new Input();
+            string text = "";
 
             //Get either manually entered text, or text from a file
             Console.WriteLine("How would you like to enter your text?\n1) Keyboard \n2) File");
-            int input = Convert.ToInt16(Console.ReadLine());
-            if (input == 1)
+            int choice = Convert.ToInt16(Console.ReadLine());
+            if (choice == 1)
             {
-                text.manualTextInput();
+                text = Text.manualTextInput();
             }
-            else if (input == 2)
+            else if (choice == 2)
             {
                 Console.WriteLine("enter your file name:"); 
                 string fileName = Console.ReadLine();
                 try
                 {
-                    text.fileTextInput(fileName);
+                    text = Text.fileTextInput(fileName);
                 }
                 catch (ArgumentException e)
                 {
@@ -43,6 +44,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 Console.WriteLine("not a valid input"); 
             }
 
+            
             
             
 

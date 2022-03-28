@@ -18,10 +18,16 @@ namespace CMP1903M_Assessment_1_Base_Code
         {
             //List of integers to hold the first five measurements:
             //1. Number of sentences
+            int sentenceNo = 0;
             //2. Number of vowels
+            int vowelNo = 0;
             //3. Number of consonants
+            int constanNo = 0;
             //4. Number of upper case letters
+            int upperNo = 0;
             //5. Number of lower case letters
+            int lowerNo = 0;
+
             List<int> values = new List<int>();
             //Initialise all the values in the list to '0'
             for(int i = 0; i<5; i++)
