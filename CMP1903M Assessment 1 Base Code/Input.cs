@@ -28,13 +28,9 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Returns: string
         //Gets text input from a .txt file
         public string fileTextInput(string fileName)
-        {
-            try
-            {
-            
-            }
-            
-            
+        { 
+            string text = File.ReadAllText(fileName);
+            return text;           
         }
 
     }
