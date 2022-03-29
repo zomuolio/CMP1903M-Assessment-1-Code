@@ -8,8 +8,11 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     class Report
     {
-        //Handles the reporting of the analysis
-        //Maybe have different methods for different formats of output?
+
+        ////Method: outputConsole
+        //Arguments: List of integers
+        //Returns: None
+        //Handles the reporting of the analysis via console output.
         public void outputConsole(List<int> values)
         {
             Console.WriteLine("Your string contained the following:");
@@ -19,8 +22,5 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine("Upper Case:" + values[3]);
             Console.WriteLine("Lower Case" + values[4]);
         }
-
-
-
     }
 }

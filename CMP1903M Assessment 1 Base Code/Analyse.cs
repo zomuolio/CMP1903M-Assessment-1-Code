@@ -29,22 +29,50 @@ namespace CMP1903M_Assessment_1_Base_Code
             {
                 values.Add(0);
             }
-            
-            int j = 0;
-            int length = input.Length;
-            while (j < length)
-            {
-                if (input[j] == '.')
-                {
-                    values[0]++;
-                }
-                //else if (input[j])
-                //{
 
-                //}
-                j++;
+
+            //Case for sentences
+            List<string> Sentence = new List<string>() { ".", "?", "!" };
+            for (int i = 0; i < Sentence.Count; i++)
+            {
+                values[0] += input.Split(Sentence[i]).Count() - 1;
             }
 
+            //creating lists for upper and lower case to save time on assigning values to them.
+            List<string> Upper = new List<string>();
+            List<string> Lower = new List<string>();
+
+            //Case for vowels
+            List<string> Vowel = new List<string> { "a", "e", "i", "o", "u" };
+            for (int i = 0; i < Vowel.Count; i++)
+            {
+                values[1] += input.Split(Vowel[i]).Count() - 1;
+                Upper.Add(Vowel[i].ToUpper());
+                Lower.Add(Vowel[i]);
+            }
+
+            //Case for Constanants
+            List<string> Constanants = new List<string>() 
+            {"b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"};
+            for (int i = 0; i < Constanants.Count; i++)
+            {
+                values[2] += input.Split(Constanants[i]).Count() - 1;
+                Upper.Add(Constanants[i].ToUpper());
+                Lower.Add(Constanants[i]);
+
+            }
+
+            //Case for Uppercase
+            for (int i = 0; i < Upper.Count; i++) 
+            {
+                values[3] += input.Split(Upper[i]).Count() - 1;
+            }
+
+            //Case for Lowercase
+            for (int i = 0; i < Lower.Count; i++)
+            {
+                values[4] += input.Split(Lower[i]).Count() - 1;
+            }
 
             return values;
         }

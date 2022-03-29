@@ -19,7 +19,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         public string manualTextInput()
         {
             Console.WriteLine("Enter your text:");
-            string text = Console.ReadLine();
+            text = Console.ReadLine();
             return text;
         }
 
@@ -29,7 +29,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from a .txt file
         public string fileTextInput(string fileName)
         { 
-            string text = File.ReadAllText(fileName);
+            text = File.ReadAllText(fileName);
             return text;           
         }
 
