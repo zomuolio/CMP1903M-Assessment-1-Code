@@ -44,21 +44,17 @@ namespace CMP1903M_Assessment_1_Base_Code
                 Console.WriteLine("not a valid input"); 
             }
 
-            
-            
-            
-
-
-
             //Create an 'Analyse' object
+            Analyse analyse = new Analyse();
+
             //Pass the text input to the 'analyseText' method
+            //Receive a list of integers back as parameters
+            parameters = analyse.analyseText(text);
 
-
-            //Receive a list of integers back
-
-
+            //Create the 'Report' Object
+            Report report = new Report();
             //Report the results of the analysis
-
+            report.outputConsole(parameters);
 
             //TO ADD: Get the frequency of individual letters?
 
