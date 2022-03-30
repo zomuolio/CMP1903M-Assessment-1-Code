@@ -18,8 +18,18 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from the keyboard
         public string manualTextInput()
         {
-            Console.WriteLine("Enter your text:");
-            text = Console.ReadLine();
+            bool loop = true; 
+            Console.WriteLine("Enter your sentences, use a '*' to enter your last one.");
+            //loop runs until someone enters a * as their last character.
+            while (loop == true)
+            {
+                Console.WriteLine("Enter your text:");
+                text += " " + Console.ReadLine();
+                if (text[text.Length - 1] == '*')
+                {
+                    loop = false;
+                }
+            }
             return text;
         }
 
