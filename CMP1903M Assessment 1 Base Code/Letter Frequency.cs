@@ -8,6 +8,8 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     class Letter_Frequency
     {
+        //Aditional Method
+
         ////Method: Letters
         //Arguments: String
         //Returns: List of Integers
